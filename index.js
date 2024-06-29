@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin:"https://jobportal-client-v32s-e8vrsuugh-tapader13s-projects.vercel.app/",
+    origin:"https://ghkgfj-bob08t7o5-tapader13s-projects.vercel.app/",
     exposedHeaders: ['total'],
   })
 );
