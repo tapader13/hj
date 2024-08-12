@@ -23,11 +23,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: 'https://hj-client.vercel.app',
+    origin: 'https://hj-client.vercel.app', // Your frontend URL
+    credentials: true, // Allow credentials (cookies) to be sent
     exposedHeaders: ['total'],
   })
 );
-
 //api
 app.use('/api', userRoute);
 app.use('/contact', contactRoute);
