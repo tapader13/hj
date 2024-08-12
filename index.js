@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: 'http://localhost:5175/',
+    origin: 'https://hj-client.vercel.app/',
     exposedHeaders: ['total'],
   })
 );
