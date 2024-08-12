@@ -2,7 +2,7 @@ import express from 'express';
 import dotnev from 'dotenv';
 import cors from 'cors';
 import connectDb from './config/db.js';
-import { errorHandler, notFound } from './middleware/errorMiddleware.js'; 
+import { errorHandler, notFound } from './middleware/errorMiddleware.js';
 import userRoute from './routes/userRoutes.js';
 import contactRoute from './routes/contactRoutes.js';
 import locationRoute from './routes/locationRoutes.js';
@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin:"https://ghkgfj-bob08t7o5-tapader13s-projects.vercel.app/",
+    origin: 'https://jobportal-client-v32s.vercel.app/',
     exposedHeaders: ['total'],
   })
 );
