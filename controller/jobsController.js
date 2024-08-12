@@ -4,7 +4,7 @@ import Job from '../models/jobModel.js';
 //@ job/createjob
 //@ private
 const createJob = asyncHandler(async (req, res) => {
-  const id = req.user.id;
+  const id = req.user._id;
   const {
     title,
     description,
@@ -54,7 +54,7 @@ const createJob = asyncHandler(async (req, res) => {
 //@ private
 const getJobByUserId = asyncHandler(async (req, res) => {
   try {
-    const jobs = await Job.find({ userid: req.user.id });
+    const jobs = await Job.find({ userid: req.user._id });
     res.status(200).json(jobs);
   } catch (error) {
     res.status(400);
@@ -66,7 +66,7 @@ const getJobByUserId = asyncHandler(async (req, res) => {
 //@ public
 const getJobDetails = asyncHandler(async (req, res) => {
   try {
-    const jobdlts = await Job.find({ _id: req.params.id });
+    const jobdlts = await Job.find({ _id: req.params._id });
     res.status(200).json(jobdlts);
   } catch (error) {
     res.status(400);
