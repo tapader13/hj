@@ -5,8 +5,9 @@ const genToken = (res, userId) => {
   });
   res.cookie('jwt', token, {
     httpOnly: true,
-    secure: false,
-    sameSite: 'Lax',
+    secure: true,
+    sameSite: 'None',
+    domain: '/',
     maxAge: 30 * 24 * 60 * 60 * 1000,
   });
 };
